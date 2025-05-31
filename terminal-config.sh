@@ -31,9 +31,15 @@ else
   echo "⚠️ Oh My Zsh já está instalado! Pulando..."
 fi
 
-# 🔹 Configurar tema Agnoster no Zsh
-echo "🎨 Configurando tema Agnoster no Zsh..."
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="agnoster"/' ~/.zshrc
+
+# Baixando tema powerlevel10k
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+
+# 🔹 Configurar tema Power Level 10k  no Zsh
+echo "🎨 Configurando tema Power level 10k no Zsh..."
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc
 
 # 🔹 Configurar alias para `ls` colorido
 echo "alias ls='ls --color=auto'" >> ~/.zshrc
